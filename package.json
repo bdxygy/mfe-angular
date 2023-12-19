@@ -1,0 +1,17 @@
+{
+  "name": "mfe-16",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:container": "cd container && pnpm start",
+    "start:user": "cd user && pnpm start",
+    "start:login": "cd login && pnpm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
