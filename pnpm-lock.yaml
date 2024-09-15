@@ -45,6 +45,9 @@ importers:
         specifier: ~0.14.3
         version: 0.14.10
     devDependencies:
+      '@angular-buildx/webpack':
+        specifier: 17.0.3-RC-3
+        version: 17.0.3-RC-3(@angular/compiler-cli@17.3.12(@angular/compiler@17.3.12(@angular/core@17.3.12(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.4.5))(@types/express@4.17.21)(@types/node@22.5.4)(chokidar@3.6.0)(karma@6.4.4)(typescript@5.4.5)
       '@angular-devkit/build-angular':
         specifier: ^17.3.8
         version: 17.3.9(@angular/compiler-cli@17.3.12(@angular/compiler@17.3.12(@angular/core@17.3.12(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.4.5))(@types/express@4.17.21)(@types/node@22.5.4)(chokidar@3.6.0)(karma@6.4.4)(typescript@5.4.5)
@@ -81,6 +84,9 @@ importers:
       typescript:
         specifier: ~5.4.2
         version: 5.4.5
+      webpack-merge:
+        specifier: ^6.0.1
+        version: 6.0.1
 
 packages:
 
@@ -96,6 +102,9 @@ packages:
 
   '@angular-architects/module-federation@17.0.8':
     resolution: {integrity: sha512-yMsFaqL4Ek7SEQcUtCUuW1TNzpM9IjDuvh4f3PBc2XKiWwsCthWyvTSztwnGriH8v/bwlNtqw4P6+kcYM77uvA==}
+
+  '@angular-buildx/webpack@17.0.3-RC-3':
+    resolution: {integrity: sha512-tU4fVQn7NbDYTGWV/0M8ASPwNjUwg8SAW0E1jNFKNSZ4KB+i3+VzRPJiCSBWOyGwBDMxoda9agQL6irooura/A==}
 
   '@angular-devkit/architect@0.1703.9':
     resolution: {integrity: sha512-kEPfTOVnzrJxPGTvaXy8653HU9Fucxttx9gVfQR1yafs+yIEGx3fKGKe89YPmaEay32bIm7ZUpxDF1FO14nkdQ==}
@@ -3846,6 +3855,10 @@ packages:
     resolution: {integrity: sha512-+4zXKdx7UnO+1jaN4l2lHVD+mFvnlZQP/6ljaJVb4SZiwIKeUnrT5l0gkT8z+n4hKpC+jpOv6O9R+gLtag7pSA==}
     engines: {node: '>=10.0.0'}
 
+  webpack-merge@6.0.1:
+    resolution: {integrity: sha512-hXXvrjtx2PLYx4qruKl+kyRSLc52V+cCvMxRjmKwoA+CBbbF5GfIBtR6kCvl0fYGqTUPKB+1ktVmTHqMOzgCBg==}
+    engines: {node: '>=18.0.0'}
+
   webpack-sources@3.2.3:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
     engines: {node: '>=10.13.0'}
@@ -3998,6 +4011,43 @@ snapshots:
       - '@angular/common'
       - '@angular/core'
       - encoding
+
+  '@angular-buildx/webpack@17.0.3-RC-3(@angular/compiler-cli@17.3.12(@angular/compiler@17.3.12(@angular/core@17.3.12(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.4.5))(@types/express@4.17.21)(@types/node@22.5.4)(chokidar@3.6.0)(karma@6.4.4)(typescript@5.4.5)':
+    dependencies:
+      '@angular-devkit/architect': 0.1703.9(chokidar@3.6.0)
+      '@angular-devkit/build-angular': 17.3.9(@angular/compiler-cli@17.3.12(@angular/compiler@17.3.12(@angular/core@17.3.12(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.4.5))(@types/express@4.17.21)(@types/node@22.5.4)(chokidar@3.6.0)(karma@6.4.4)(typescript@5.4.5)
+      '@angular-devkit/core': 17.3.9(chokidar@3.6.0)
+    transitivePeerDependencies:
+      - '@angular/compiler-cli'
+      - '@angular/localize'
+      - '@angular/platform-server'
+      - '@angular/service-worker'
+      - '@rspack/core'
+      - '@swc/core'
+      - '@types/express'
+      - '@types/node'
+      - '@web/test-runner'
+      - browser-sync
+      - bufferutil
+      - chokidar
+      - debug
+      - html-webpack-plugin
+      - jest
+      - jest-environment-jsdom
+      - karma
+      - lightningcss
+      - ng-packagr
+      - node-sass
+      - protractor
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - tailwindcss
+      - typescript
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
 
   '@angular-devkit/architect@0.1703.9(chokidar@3.6.0)':
     dependencies:
@@ -8168,6 +8218,12 @@ snapshots:
       - utf-8-validate
 
   webpack-merge@5.10.0:
+    dependencies:
+      clone-deep: 4.0.1
+      flat: 5.0.2
+      wildcard: 2.0.1
+
+  webpack-merge@6.0.1:
     dependencies:
       clone-deep: 4.0.1
       flat: 5.0.2

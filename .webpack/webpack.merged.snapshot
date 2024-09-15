@@ -1,0 +1,1590 @@
+module.exports = {
+  plugins: [
+    {
+      apply: [Function: apply]
+    },
+    NamedChunksPlugin {},
+    OccurrencesPlugin {
+      options: {
+        aot: true,
+        scriptsOptimization: false
+      }
+    },
+    DedupeModuleResolvePlugin {
+      options: {
+        verbose: undefined
+      },
+      modules: Map(0) {}
+    },
+    ProgressPlugin {
+      profile: false,
+      handler: [Function: handler],
+      modulesCount: 5000,
+      dependenciesCount: 10000,
+      showEntries: true,
+      showModules: true,
+      showDependencies: true,
+      showActiveModules: false,
+      percentBy: undefined
+    },
+    CopyPlugin {
+      patterns: [
+        {
+          context: 'C:/Users/Budi Santoso/Documents/personal/tester/remote/src/',
+          to: '',
+          from: 'favicon.ico',
+          noErrorOnMissing: true,
+          force: true,
+          globOptions: {
+            dot: true,
+            followSymbolicLinks: false,
+            ignore: [
+              'C:/Users/Budi Santoso/Documents/personal/tester/remote/src/.gitkeep',
+              'C:/Users/Budi Santoso/Documents/personal/tester/remote/src/**/.DS_Store',
+              'C:/Users/Budi Santoso/Documents/personal/tester/remote/src/**/Thumbs.db'
+            ]
+          },
+          priority: 0
+        },
+        {
+          context: 'C:/Users/Budi Santoso/Documents/personal/tester/remote/src/assets/',
+          to: 'assets/',
+          from: '**/*',
+          noErrorOnMissing: true,
+          force: true,
+          globOptions: {
+            dot: true,
+            followSymbolicLinks: false,
+            ignore: [
+              'C:/Users/Budi Santoso/Documents/personal/tester/remote/src/assets/.gitkeep',
+              'C:/Users/Budi Santoso/Documents/personal/tester/remote/src/assets/**/.DS_Store',
+              'C:/Users/Budi Santoso/Documents/personal/tester/remote/src/assets/**/Thumbs.db'
+            ]
+          },
+          priority: 1
+        }
+      ],
+      options: {}
+    },
+    DevToolsIgnorePlugin {},
+    SourceMapDevToolPlugin {
+      sourceMapFilename: '[file].map',
+      sourceMappingURLComment: '\n//# sourceMappingURL=[url]',
+      moduleFilenameTemplate: '[resource-path]',
+      fallbackModuleFilenameTemplate: 'webpack://[namespace]/[resourcePath]?[hash]',
+      namespace: '',
+      options: {
+        filename: '[file].map',
+        include: [
+          /js$/,
+          /css$/
+        ],
+        sourceRoot: 'webpack:///',
+        moduleFilenameTemplate: '[resource-path]',
+        append: undefined
+      }
+    },
+    AngularWebpackPlugin {
+      pluginOptions: {
+        emitClassMetadata: false,
+        emitNgModuleScope: true,
+        jitMode: false,
+        fileReplacements: {},
+        substitutions: {},
+        directTemplateLoading: true,
+        tsconfig: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\tsconfig.app.json',
+        compilerOptions: {
+          sourceMap: true,
+          declaration: false,
+          declarationMap: false,
+          preserveSymlinks: false
+        },
+        inlineStyleFileExtension: 'scss'
+      },
+      compilerCliModule: undefined,
+      watchMode: undefined,
+      ngtscNextProgram: undefined,
+      builder: undefined,
+      sourceFileCache: undefined,
+      webpackCache: undefined,
+      webpackCreateHash: undefined,
+      fileDependencies: Map(0) {},
+      requiredFilesToEmit: Set(0) {},
+      requiredFilesToEmitCache: Map(0) {},
+      fileEmitHistory: Map(0) {}
+    },
+    AnyComponentStyleBudgetChecker {
+      budgets: []
+    },
+    StylesWebpackPlugin {
+      options: {
+        root: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote',
+        entryPoints: {
+          styles: [
+            'src/styles.scss'
+          ]
+        },
+        preserveSymlinks: false
+      },
+      compilation: undefined
+    },
+    {
+      apply: [Function: apply]
+    },
+    MiniCssExtractPlugin {
+      _sortedModulesCache: WeakMap {
+        <items unknown>
+      },
+      options: {
+        filename: '[name].css',
+        ignoreOrder: false,
+        experimentalUseImportModule: undefined,
+        runtime: true,
+        chunkFilename: '[name].css'
+      },
+      runtimeOptions: {
+        insert: undefined,
+        linkType: 'text/css',
+        attributes: undefined
+      }
+    },
+    SuppressExtractedTextChunksWebpackPlugin {},
+    ModuleFederationPlugin {
+      _options: {
+        library: {
+          type: 'module'
+        },
+        name: 'ngHost_Remote',
+        filename: 'entry.js',
+        exposes: {
+          './Profile': './src/app/profile/profile.module.ts',
+          './ProfileComponent': './src/app/profile/profile.component.ts'
+        },
+        shared: {
+          '@angular/core': {
+            singleton: true,
+            strictVersion: true,
+            requiredVersion: '^17.3.0',
+            version: '17.3.0'
+          },
+          '@angular/core/primitives/signals': {
+            singleton: true,
+            strictVersion: true,
+            requiredVersion: '^17.3.0',
+            version: '17.3.0'
+          },
+          '@angular/core/rxjs-interop': {
+            singleton: true,
+            strictVersion: true,
+            requiredVersion: '^17.3.0',
+            version: '17.3.0'
+          },
+          '@angular/core/testing': {
+            singleton: true,
+            strictVersion: true,
+            requiredVersion: '^17.3.0',
+            version: '17.3.0'
+          },
+          '@angular/common': {
+            singleton: true,
+            strictVersion: true,
+            requiredVersion: '^17.3.0',
+            version: '17.3.0'
+          },
+          '@angular/common/http': {
+            singleton: true,
+            strictVersion: true,
+            requiredVersion: '^17.3.0',
+            version: '17.3.0'
+          },
+          '@angular/common/http/testing': {
+            singleton: true,
+            strictVersion: true,
+            requiredVersion: '^17.3.0',
+            version: '17.3.0'
+          },
+          '@angular/common/testing': {
+            singleton: true,
+            strictVersion: true,
+            requiredVersion: '^17.3.0',
+            version: '17.3.0'
+          },
+          '@angular/router': {
+            singleton: true,
+            strictVersion: true,
+            requiredVersion: '^17.3.0',
+            version: '17.3.0'
+          },
+          '@angular/router/testing': {
+            singleton: true,
+            strictVersion: true,
+            requiredVersion: '^17.3.0',
+            version: '17.3.0'
+          }
+        }
+      }
+    },
+    NormalModuleReplacementPlugin {
+      resourceRegExp: /./,
+      newResource: [Function (anonymous)]
+    }
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.?(svg|html)$/,
+        resourceQuery: /\?ngResource/,
+        type: 'asset/source'
+      },
+      {
+        test: /[/\\]rxjs[/\\]add[/\\].+\.js$/,
+        sideEffects: true
+      },
+      {
+        test: /\.[cm]?[tj]sx?$/,
+        resolve: {
+          fullySpecified: false
+        },
+        exclude: [
+          /[\\/]node_modules[/\\](?:core-js|@babel|tslib|web-animations-js|web-streams-polyfill|whatwg-url)[/\\]/
+        ],
+        use: [
+          {
+            loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\@angular-devkit+build-angular@17.3.9_@angular+compiler-cli@17.3.12_@angular+compiler@17.3.12__kzzj3nkgr5j6fpap5l5f4ifjla\\node_modules\\@angular-devkit\\build-angular\\src\\tools\\babel\\webpack-loader.js',
+            options: {
+              cacheDirectory: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\.angular\\cache\\17.3.9\\babel-webpack',
+              aot: undefined,
+              optimize: undefined,
+              supportedBrowsers: [
+                'chrome 128',
+                'chrome 127',
+                'edge 128',
+                'edge 127',
+                'firefox 130',
+                'firefox 128',
+                'firefox 115',
+                'ios_saf 17.5',
+                'ios_saf 17.4',
+                'ios_saf 17.3',
+                'ios_saf 17.2',
+                'ios_saf 17.1',
+                'ios_saf 17.0',
+                'ios_saf 16.6-16.7',
+                'ios_saf 16.5',
+                'ios_saf 16.4',
+                'ios_saf 16.3',
+                'ios_saf 16.2',
+                'ios_saf 16.1',
+                'ios_saf 16.0',
+                'safari 17.5',
+                'safari 17.4',
+                'safari 17.3',
+                'safari 17.2',
+                'safari 17.1',
+                'safari 17.0',
+                'safari 16.6',
+                'safari 16.5',
+                'safari 16.4',
+                'safari 16.3',
+                'safari 16.2',
+                'safari 16.1',
+                'safari 16.0'
+              ],
+              instrumentCode: undefined
+            }
+          }
+        ]
+      },
+      {
+        test: /\.[cm]?jsx?$/,
+        enforce: 'pre',
+        loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\source-map-loader@5.0.0_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\source-map-loader\\dist\\cjs.js',
+        options: {
+          filterSourceMappingUrl: [Function: filterSourceMappingUrl]
+        }
+      },
+      {
+        test: /\.[cm]?tsx?$/,
+        loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\@ngtools+webpack@17.3.9_@angular+compiler-cli@17.3.12_@angular+compiler@17.3.12_@angular+core_knvb54iw62k36ess5ye65txtxi\\node_modules\\@ngtools\\webpack\\src\\ivy\\index.js',
+        exclude: [
+          /[\\/]node_modules[/\\](?:css-loader|mini-css-extract-plugin|webpack-dev-server|webpack)[/\\]/
+        ]
+      },
+      {
+        test: /\.(?:css)$/i,
+        rules: [
+          {
+            oneOf: [
+              {
+                use: [
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\mini-css-extract-plugin@2.8.1_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\mini-css-extract-plugin\\dist\\loader.js'
+                  },
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\css-loader@6.10.0_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\css-loader\\dist\\cjs.js',
+                    options: {
+                      url: false,
+                      sourceMap: true,
+                      importLoaders: 1
+                    }
+                  },
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\postcss-loader@8.1.1_postcss@8.4.35_typescript@5.4.5_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\postcss-loader\\dist\\cjs.js',
+                    options: {
+                      implementation: <ref *18> [Function: postcss] {
+                        plugin: [Function: plugin],
+                        stringify: <ref *1> [Function: stringify] {
+                          default: [Circular *1]
+                        },
+                        parse: <ref *2> [Function: parse] {
+                          default: [Circular *2]
+                        },
+                        fromJSON: <ref *3> [Function: fromJSON] {
+                          default: [Circular *3]
+                        },
+                        list: <ref *4> {
+                          comma: [Function: comma],
+                          space: [Function: space],
+                          split: [Function: split],
+                          default: [Circular *4]
+                        },
+                        comment: [Function (anonymous)],
+                        atRule: [Function (anonymous)],
+                        decl: [Function (anonymous)],
+                        rule: [Function (anonymous)],
+                        root: [Function (anonymous)],
+                        document: [Function (anonymous)],
+                        CssSyntaxError: <ref *5> [class CssSyntaxError extends Error] {
+                          default: [Circular *5]
+                        },
+                        Declaration: <ref *6> [class Declaration extends Node] {
+                          default: [Circular *6]
+                        },
+                        Container: <ref *7> [class Container extends Node] {
+                          registerParse: [Function (anonymous)],
+                          registerRule: [Function (anonymous)],
+                          registerAtRule: [Function (anonymous)],
+                          registerRoot: [Function (anonymous)],
+                          default: [Circular *7],
+                          rebuild: [Function (anonymous)]
+                        },
+                        Processor: <ref *8> [class Processor] {
+                          default: [Circular *8]
+                        },
+                        Document: <ref *9> [class Document extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *9]
+                        },
+                        Comment: <ref *10> [class Comment extends Node] {
+                          default: [Circular *10]
+                        },
+                        Warning: <ref *11> [class Warning] {
+                          default: [Circular *11]
+                        },
+                        AtRule: <ref *12> [class AtRule extends Container] {
+                          default: [Circular *12]
+                        },
+                        Result: <ref *13> [class Result] {
+                          default: [Circular *13]
+                        },
+                        Input: <ref *14> [class Input] {
+                          default: [Circular *14]
+                        },
+                        Rule: <ref *15> [class Rule extends Container] {
+                          default: [Circular *15]
+                        },
+                        Root: <ref *16> [class Root extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *16]
+                        },
+                        Node: <ref *17> [class Node] {
+                          default: [Circular *17]
+                        },
+                        default: [Circular *18]
+                      },
+                      postcssOptions: [Function: optionGenerator] {
+                        config: false
+                      },
+                      sourceMap: true
+                    }
+                  }
+                ],
+                resourceQuery: /\?ngGlobalStyle/
+              },
+              {
+                use: [
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\css-loader@6.10.0_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\css-loader\\dist\\cjs.js',
+                    options: {
+                      url: false,
+                      sourceMap: true,
+                      importLoaders: 1,
+                      exportType: 'string',
+                      esModule: false
+                    }
+                  },
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\postcss-loader@8.1.1_postcss@8.4.35_typescript@5.4.5_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\postcss-loader\\dist\\cjs.js',
+                    options: {
+                      implementation: <ref *18> [Function: postcss] {
+                        plugin: [Function: plugin],
+                        stringify: <ref *1> [Function: stringify] {
+                          default: [Circular *1]
+                        },
+                        parse: <ref *2> [Function: parse] {
+                          default: [Circular *2]
+                        },
+                        fromJSON: <ref *3> [Function: fromJSON] {
+                          default: [Circular *3]
+                        },
+                        list: <ref *4> {
+                          comma: [Function: comma],
+                          space: [Function: space],
+                          split: [Function: split],
+                          default: [Circular *4]
+                        },
+                        comment: [Function (anonymous)],
+                        atRule: [Function (anonymous)],
+                        decl: [Function (anonymous)],
+                        rule: [Function (anonymous)],
+                        root: [Function (anonymous)],
+                        document: [Function (anonymous)],
+                        CssSyntaxError: <ref *5> [class CssSyntaxError extends Error] {
+                          default: [Circular *5]
+                        },
+                        Declaration: <ref *6> [class Declaration extends Node] {
+                          default: [Circular *6]
+                        },
+                        Container: <ref *7> [class Container extends Node] {
+                          registerParse: [Function (anonymous)],
+                          registerRule: [Function (anonymous)],
+                          registerAtRule: [Function (anonymous)],
+                          registerRoot: [Function (anonymous)],
+                          default: [Circular *7],
+                          rebuild: [Function (anonymous)]
+                        },
+                        Processor: <ref *8> [class Processor] {
+                          default: [Circular *8]
+                        },
+                        Document: <ref *9> [class Document extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *9]
+                        },
+                        Comment: <ref *10> [class Comment extends Node] {
+                          default: [Circular *10]
+                        },
+                        Warning: <ref *11> [class Warning] {
+                          default: [Circular *11]
+                        },
+                        AtRule: <ref *12> [class AtRule extends Container] {
+                          default: [Circular *12]
+                        },
+                        Result: <ref *13> [class Result] {
+                          default: [Circular *13]
+                        },
+                        Input: <ref *14> [class Input] {
+                          default: [Circular *14]
+                        },
+                        Rule: <ref *15> [class Rule extends Container] {
+                          default: [Circular *15]
+                        },
+                        Root: <ref *16> [class Root extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *16]
+                        },
+                        Node: <ref *17> [class Node] {
+                          default: [Circular *17]
+                        },
+                        default: [Circular *18]
+                      },
+                      postcssOptions: [Function: optionGenerator] {
+                        config: false
+                      }
+                    }
+                  }
+                ],
+                resourceQuery: /\?ngResource/
+              }
+            ]
+          },
+          {
+            use: []
+          }
+        ]
+      },
+      {
+        test: /\.(?:scss)$/i,
+        rules: [
+          {
+            oneOf: [
+              {
+                use: [
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\mini-css-extract-plugin@2.8.1_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\mini-css-extract-plugin\\dist\\loader.js'
+                  },
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\css-loader@6.10.0_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\css-loader\\dist\\cjs.js',
+                    options: {
+                      url: false,
+                      sourceMap: true,
+                      importLoaders: 1
+                    }
+                  },
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\postcss-loader@8.1.1_postcss@8.4.35_typescript@5.4.5_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\postcss-loader\\dist\\cjs.js',
+                    options: {
+                      implementation: <ref *18> [Function: postcss] {
+                        plugin: [Function: plugin],
+                        stringify: <ref *1> [Function: stringify] {
+                          default: [Circular *1]
+                        },
+                        parse: <ref *2> [Function: parse] {
+                          default: [Circular *2]
+                        },
+                        fromJSON: <ref *3> [Function: fromJSON] {
+                          default: [Circular *3]
+                        },
+                        list: <ref *4> {
+                          comma: [Function: comma],
+                          space: [Function: space],
+                          split: [Function: split],
+                          default: [Circular *4]
+                        },
+                        comment: [Function (anonymous)],
+                        atRule: [Function (anonymous)],
+                        decl: [Function (anonymous)],
+                        rule: [Function (anonymous)],
+                        root: [Function (anonymous)],
+                        document: [Function (anonymous)],
+                        CssSyntaxError: <ref *5> [class CssSyntaxError extends Error] {
+                          default: [Circular *5]
+                        },
+                        Declaration: <ref *6> [class Declaration extends Node] {
+                          default: [Circular *6]
+                        },
+                        Container: <ref *7> [class Container extends Node] {
+                          registerParse: [Function (anonymous)],
+                          registerRule: [Function (anonymous)],
+                          registerAtRule: [Function (anonymous)],
+                          registerRoot: [Function (anonymous)],
+                          default: [Circular *7],
+                          rebuild: [Function (anonymous)]
+                        },
+                        Processor: <ref *8> [class Processor] {
+                          default: [Circular *8]
+                        },
+                        Document: <ref *9> [class Document extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *9]
+                        },
+                        Comment: <ref *10> [class Comment extends Node] {
+                          default: [Circular *10]
+                        },
+                        Warning: <ref *11> [class Warning] {
+                          default: [Circular *11]
+                        },
+                        AtRule: <ref *12> [class AtRule extends Container] {
+                          default: [Circular *12]
+                        },
+                        Result: <ref *13> [class Result] {
+                          default: [Circular *13]
+                        },
+                        Input: <ref *14> [class Input] {
+                          default: [Circular *14]
+                        },
+                        Rule: <ref *15> [class Rule extends Container] {
+                          default: [Circular *15]
+                        },
+                        Root: <ref *16> [class Root extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *16]
+                        },
+                        Node: <ref *17> [class Node] {
+                          default: [Circular *17]
+                        },
+                        default: [Circular *18]
+                      },
+                      postcssOptions: [Function: optionGenerator] {
+                        config: false
+                      },
+                      sourceMap: true
+                    }
+                  }
+                ],
+                resourceQuery: /\?ngGlobalStyle/
+              },
+              {
+                use: [
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\css-loader@6.10.0_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\css-loader\\dist\\cjs.js',
+                    options: {
+                      url: false,
+                      sourceMap: true,
+                      importLoaders: 1,
+                      exportType: 'string',
+                      esModule: false
+                    }
+                  },
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\postcss-loader@8.1.1_postcss@8.4.35_typescript@5.4.5_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\postcss-loader\\dist\\cjs.js',
+                    options: {
+                      implementation: <ref *18> [Function: postcss] {
+                        plugin: [Function: plugin],
+                        stringify: <ref *1> [Function: stringify] {
+                          default: [Circular *1]
+                        },
+                        parse: <ref *2> [Function: parse] {
+                          default: [Circular *2]
+                        },
+                        fromJSON: <ref *3> [Function: fromJSON] {
+                          default: [Circular *3]
+                        },
+                        list: <ref *4> {
+                          comma: [Function: comma],
+                          space: [Function: space],
+                          split: [Function: split],
+                          default: [Circular *4]
+                        },
+                        comment: [Function (anonymous)],
+                        atRule: [Function (anonymous)],
+                        decl: [Function (anonymous)],
+                        rule: [Function (anonymous)],
+                        root: [Function (anonymous)],
+                        document: [Function (anonymous)],
+                        CssSyntaxError: <ref *5> [class CssSyntaxError extends Error] {
+                          default: [Circular *5]
+                        },
+                        Declaration: <ref *6> [class Declaration extends Node] {
+                          default: [Circular *6]
+                        },
+                        Container: <ref *7> [class Container extends Node] {
+                          registerParse: [Function (anonymous)],
+                          registerRule: [Function (anonymous)],
+                          registerAtRule: [Function (anonymous)],
+                          registerRoot: [Function (anonymous)],
+                          default: [Circular *7],
+                          rebuild: [Function (anonymous)]
+                        },
+                        Processor: <ref *8> [class Processor] {
+                          default: [Circular *8]
+                        },
+                        Document: <ref *9> [class Document extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *9]
+                        },
+                        Comment: <ref *10> [class Comment extends Node] {
+                          default: [Circular *10]
+                        },
+                        Warning: <ref *11> [class Warning] {
+                          default: [Circular *11]
+                        },
+                        AtRule: <ref *12> [class AtRule extends Container] {
+                          default: [Circular *12]
+                        },
+                        Result: <ref *13> [class Result] {
+                          default: [Circular *13]
+                        },
+                        Input: <ref *14> [class Input] {
+                          default: [Circular *14]
+                        },
+                        Rule: <ref *15> [class Rule extends Container] {
+                          default: [Circular *15]
+                        },
+                        Root: <ref *16> [class Root extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *16]
+                        },
+                        Node: <ref *17> [class Node] {
+                          default: [Circular *17]
+                        },
+                        default: [Circular *18]
+                      },
+                      postcssOptions: [Function: optionGenerator] {
+                        config: false
+                      }
+                    }
+                  }
+                ],
+                resourceQuery: /\?ngResource/
+              }
+            ]
+          },
+          {
+            use: [
+              {
+                loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\resolve-url-loader@5.0.0\\node_modules\\resolve-url-loader\\index.js',
+                options: {
+                  sourceMap: true
+                }
+              },
+              {
+                loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\sass-loader@14.1.1_sass@1.71.1_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\sass-loader\\dist\\cjs.js',
+                options: {
+                  sourceMap: true,
+                  api: 'modern',
+                  implementation: SassWorkerImplementation {
+                    rebase: false,
+                    workers: [],
+                    availableWorkers: [],
+                    requests: Map(0) {},
+                    workerPath: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\@angular-devkit+build-angular@17.3.9_@angular+compiler-cli@17.3.12_@angular+compiler@17.3.12__kzzj3nkgr5j6fpap5l5f4ifjla\\node_modules\\@angular-devkit\\build-angular\\src\\tools\\sass\\worker.js',
+                    idCounter: 1,
+                    nextWorkerIndex: 0
+                  },
+                  webpackImporter: false,
+                  sassOptions: [Function: sassOptions]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        test: /\.(?:sass)$/i,
+        rules: [
+          {
+            oneOf: [
+              {
+                use: [
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\mini-css-extract-plugin@2.8.1_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\mini-css-extract-plugin\\dist\\loader.js'
+                  },
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\css-loader@6.10.0_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\css-loader\\dist\\cjs.js',
+                    options: {
+                      url: false,
+                      sourceMap: true,
+                      importLoaders: 1
+                    }
+                  },
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\postcss-loader@8.1.1_postcss@8.4.35_typescript@5.4.5_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\postcss-loader\\dist\\cjs.js',
+                    options: {
+                      implementation: <ref *18> [Function: postcss] {
+                        plugin: [Function: plugin],
+                        stringify: <ref *1> [Function: stringify] {
+                          default: [Circular *1]
+                        },
+                        parse: <ref *2> [Function: parse] {
+                          default: [Circular *2]
+                        },
+                        fromJSON: <ref *3> [Function: fromJSON] {
+                          default: [Circular *3]
+                        },
+                        list: <ref *4> {
+                          comma: [Function: comma],
+                          space: [Function: space],
+                          split: [Function: split],
+                          default: [Circular *4]
+                        },
+                        comment: [Function (anonymous)],
+                        atRule: [Function (anonymous)],
+                        decl: [Function (anonymous)],
+                        rule: [Function (anonymous)],
+                        root: [Function (anonymous)],
+                        document: [Function (anonymous)],
+                        CssSyntaxError: <ref *5> [class CssSyntaxError extends Error] {
+                          default: [Circular *5]
+                        },
+                        Declaration: <ref *6> [class Declaration extends Node] {
+                          default: [Circular *6]
+                        },
+                        Container: <ref *7> [class Container extends Node] {
+                          registerParse: [Function (anonymous)],
+                          registerRule: [Function (anonymous)],
+                          registerAtRule: [Function (anonymous)],
+                          registerRoot: [Function (anonymous)],
+                          default: [Circular *7],
+                          rebuild: [Function (anonymous)]
+                        },
+                        Processor: <ref *8> [class Processor] {
+                          default: [Circular *8]
+                        },
+                        Document: <ref *9> [class Document extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *9]
+                        },
+                        Comment: <ref *10> [class Comment extends Node] {
+                          default: [Circular *10]
+                        },
+                        Warning: <ref *11> [class Warning] {
+                          default: [Circular *11]
+                        },
+                        AtRule: <ref *12> [class AtRule extends Container] {
+                          default: [Circular *12]
+                        },
+                        Result: <ref *13> [class Result] {
+                          default: [Circular *13]
+                        },
+                        Input: <ref *14> [class Input] {
+                          default: [Circular *14]
+                        },
+                        Rule: <ref *15> [class Rule extends Container] {
+                          default: [Circular *15]
+                        },
+                        Root: <ref *16> [class Root extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *16]
+                        },
+                        Node: <ref *17> [class Node] {
+                          default: [Circular *17]
+                        },
+                        default: [Circular *18]
+                      },
+                      postcssOptions: [Function: optionGenerator] {
+                        config: false
+                      },
+                      sourceMap: true
+                    }
+                  }
+                ],
+                resourceQuery: /\?ngGlobalStyle/
+              },
+              {
+                use: [
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\css-loader@6.10.0_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\css-loader\\dist\\cjs.js',
+                    options: {
+                      url: false,
+                      sourceMap: true,
+                      importLoaders: 1,
+                      exportType: 'string',
+                      esModule: false
+                    }
+                  },
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\postcss-loader@8.1.1_postcss@8.4.35_typescript@5.4.5_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\postcss-loader\\dist\\cjs.js',
+                    options: {
+                      implementation: <ref *18> [Function: postcss] {
+                        plugin: [Function: plugin],
+                        stringify: <ref *1> [Function: stringify] {
+                          default: [Circular *1]
+                        },
+                        parse: <ref *2> [Function: parse] {
+                          default: [Circular *2]
+                        },
+                        fromJSON: <ref *3> [Function: fromJSON] {
+                          default: [Circular *3]
+                        },
+                        list: <ref *4> {
+                          comma: [Function: comma],
+                          space: [Function: space],
+                          split: [Function: split],
+                          default: [Circular *4]
+                        },
+                        comment: [Function (anonymous)],
+                        atRule: [Function (anonymous)],
+                        decl: [Function (anonymous)],
+                        rule: [Function (anonymous)],
+                        root: [Function (anonymous)],
+                        document: [Function (anonymous)],
+                        CssSyntaxError: <ref *5> [class CssSyntaxError extends Error] {
+                          default: [Circular *5]
+                        },
+                        Declaration: <ref *6> [class Declaration extends Node] {
+                          default: [Circular *6]
+                        },
+                        Container: <ref *7> [class Container extends Node] {
+                          registerParse: [Function (anonymous)],
+                          registerRule: [Function (anonymous)],
+                          registerAtRule: [Function (anonymous)],
+                          registerRoot: [Function (anonymous)],
+                          default: [Circular *7],
+                          rebuild: [Function (anonymous)]
+                        },
+                        Processor: <ref *8> [class Processor] {
+                          default: [Circular *8]
+                        },
+                        Document: <ref *9> [class Document extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *9]
+                        },
+                        Comment: <ref *10> [class Comment extends Node] {
+                          default: [Circular *10]
+                        },
+                        Warning: <ref *11> [class Warning] {
+                          default: [Circular *11]
+                        },
+                        AtRule: <ref *12> [class AtRule extends Container] {
+                          default: [Circular *12]
+                        },
+                        Result: <ref *13> [class Result] {
+                          default: [Circular *13]
+                        },
+                        Input: <ref *14> [class Input] {
+                          default: [Circular *14]
+                        },
+                        Rule: <ref *15> [class Rule extends Container] {
+                          default: [Circular *15]
+                        },
+                        Root: <ref *16> [class Root extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *16]
+                        },
+                        Node: <ref *17> [class Node] {
+                          default: [Circular *17]
+                        },
+                        default: [Circular *18]
+                      },
+                      postcssOptions: [Function: optionGenerator] {
+                        config: false
+                      }
+                    }
+                  }
+                ],
+                resourceQuery: /\?ngResource/
+              }
+            ]
+          },
+          {
+            use: [
+              {
+                loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\resolve-url-loader@5.0.0\\node_modules\\resolve-url-loader\\index.js',
+                options: {
+                  sourceMap: true
+                }
+              },
+              {
+                loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\sass-loader@14.1.1_sass@1.71.1_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\sass-loader\\dist\\cjs.js',
+                options: {
+                  sourceMap: true,
+                  api: 'modern',
+                  implementation: SassWorkerImplementation {
+                    rebase: false,
+                    workers: [],
+                    availableWorkers: [],
+                    requests: Map(0) {},
+                    workerPath: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\@angular-devkit+build-angular@17.3.9_@angular+compiler-cli@17.3.12_@angular+compiler@17.3.12__kzzj3nkgr5j6fpap5l5f4ifjla\\node_modules\\@angular-devkit\\build-angular\\src\\tools\\sass\\worker.js',
+                    idCounter: 1,
+                    nextWorkerIndex: 0
+                  },
+                  webpackImporter: false,
+                  sassOptions: [Function: sassOptions]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        test: /\.(?:less)$/i,
+        rules: [
+          {
+            oneOf: [
+              {
+                use: [
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\mini-css-extract-plugin@2.8.1_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\mini-css-extract-plugin\\dist\\loader.js'
+                  },
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\css-loader@6.10.0_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\css-loader\\dist\\cjs.js',
+                    options: {
+                      url: false,
+                      sourceMap: true,
+                      importLoaders: 1
+                    }
+                  },
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\postcss-loader@8.1.1_postcss@8.4.35_typescript@5.4.5_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\postcss-loader\\dist\\cjs.js',
+                    options: {
+                      implementation: <ref *18> [Function: postcss] {
+                        plugin: [Function: plugin],
+                        stringify: <ref *1> [Function: stringify] {
+                          default: [Circular *1]
+                        },
+                        parse: <ref *2> [Function: parse] {
+                          default: [Circular *2]
+                        },
+                        fromJSON: <ref *3> [Function: fromJSON] {
+                          default: [Circular *3]
+                        },
+                        list: <ref *4> {
+                          comma: [Function: comma],
+                          space: [Function: space],
+                          split: [Function: split],
+                          default: [Circular *4]
+                        },
+                        comment: [Function (anonymous)],
+                        atRule: [Function (anonymous)],
+                        decl: [Function (anonymous)],
+                        rule: [Function (anonymous)],
+                        root: [Function (anonymous)],
+                        document: [Function (anonymous)],
+                        CssSyntaxError: <ref *5> [class CssSyntaxError extends Error] {
+                          default: [Circular *5]
+                        },
+                        Declaration: <ref *6> [class Declaration extends Node] {
+                          default: [Circular *6]
+                        },
+                        Container: <ref *7> [class Container extends Node] {
+                          registerParse: [Function (anonymous)],
+                          registerRule: [Function (anonymous)],
+                          registerAtRule: [Function (anonymous)],
+                          registerRoot: [Function (anonymous)],
+                          default: [Circular *7],
+                          rebuild: [Function (anonymous)]
+                        },
+                        Processor: <ref *8> [class Processor] {
+                          default: [Circular *8]
+                        },
+                        Document: <ref *9> [class Document extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *9]
+                        },
+                        Comment: <ref *10> [class Comment extends Node] {
+                          default: [Circular *10]
+                        },
+                        Warning: <ref *11> [class Warning] {
+                          default: [Circular *11]
+                        },
+                        AtRule: <ref *12> [class AtRule extends Container] {
+                          default: [Circular *12]
+                        },
+                        Result: <ref *13> [class Result] {
+                          default: [Circular *13]
+                        },
+                        Input: <ref *14> [class Input] {
+                          default: [Circular *14]
+                        },
+                        Rule: <ref *15> [class Rule extends Container] {
+                          default: [Circular *15]
+                        },
+                        Root: <ref *16> [class Root extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *16]
+                        },
+                        Node: <ref *17> [class Node] {
+                          default: [Circular *17]
+                        },
+                        default: [Circular *18]
+                      },
+                      postcssOptions: [Function: optionGenerator] {
+                        config: false
+                      },
+                      sourceMap: true
+                    }
+                  }
+                ],
+                resourceQuery: /\?ngGlobalStyle/
+              },
+              {
+                use: [
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\css-loader@6.10.0_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\css-loader\\dist\\cjs.js',
+                    options: {
+                      url: false,
+                      sourceMap: true,
+                      importLoaders: 1,
+                      exportType: 'string',
+                      esModule: false
+                    }
+                  },
+                  {
+                    loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\postcss-loader@8.1.1_postcss@8.4.35_typescript@5.4.5_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\postcss-loader\\dist\\cjs.js',
+                    options: {
+                      implementation: <ref *18> [Function: postcss] {
+                        plugin: [Function: plugin],
+                        stringify: <ref *1> [Function: stringify] {
+                          default: [Circular *1]
+                        },
+                        parse: <ref *2> [Function: parse] {
+                          default: [Circular *2]
+                        },
+                        fromJSON: <ref *3> [Function: fromJSON] {
+                          default: [Circular *3]
+                        },
+                        list: <ref *4> {
+                          comma: [Function: comma],
+                          space: [Function: space],
+                          split: [Function: split],
+                          default: [Circular *4]
+                        },
+                        comment: [Function (anonymous)],
+                        atRule: [Function (anonymous)],
+                        decl: [Function (anonymous)],
+                        rule: [Function (anonymous)],
+                        root: [Function (anonymous)],
+                        document: [Function (anonymous)],
+                        CssSyntaxError: <ref *5> [class CssSyntaxError extends Error] {
+                          default: [Circular *5]
+                        },
+                        Declaration: <ref *6> [class Declaration extends Node] {
+                          default: [Circular *6]
+                        },
+                        Container: <ref *7> [class Container extends Node] {
+                          registerParse: [Function (anonymous)],
+                          registerRule: [Function (anonymous)],
+                          registerAtRule: [Function (anonymous)],
+                          registerRoot: [Function (anonymous)],
+                          default: [Circular *7],
+                          rebuild: [Function (anonymous)]
+                        },
+                        Processor: <ref *8> [class Processor] {
+                          default: [Circular *8]
+                        },
+                        Document: <ref *9> [class Document extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *9]
+                        },
+                        Comment: <ref *10> [class Comment extends Node] {
+                          default: [Circular *10]
+                        },
+                        Warning: <ref *11> [class Warning] {
+                          default: [Circular *11]
+                        },
+                        AtRule: <ref *12> [class AtRule extends Container] {
+                          default: [Circular *12]
+                        },
+                        Result: <ref *13> [class Result] {
+                          default: [Circular *13]
+                        },
+                        Input: <ref *14> [class Input] {
+                          default: [Circular *14]
+                        },
+                        Rule: <ref *15> [class Rule extends Container] {
+                          default: [Circular *15]
+                        },
+                        Root: <ref *16> [class Root extends Container] {
+                          registerLazyResult: [Function (anonymous)],
+                          registerProcessor: [Function (anonymous)],
+                          default: [Circular *16]
+                        },
+                        Node: <ref *17> [class Node] {
+                          default: [Circular *17]
+                        },
+                        default: [Circular *18]
+                      },
+                      postcssOptions: [Function: optionGenerator] {
+                        config: false
+                      }
+                    }
+                  }
+                ],
+                resourceQuery: /\?ngResource/
+              }
+            ]
+          },
+          {
+            use: [
+              {
+                loader: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\node_modules\\.pnpm\\less-loader@11.1.0_less@4.2.0_webpack@5.94.0_esbuild@0.20.1_\\node_modules\\less-loader\\dist\\cjs.js',
+                options: {
+                  implementation: {
+                    node: [Function (anonymous)],
+                    color: [Function (anonymous)],
+                    atrule: [Function (anonymous)],
+                    detachedruleset: [Function (anonymous)],
+                    operation: [Function (anonymous)],
+                    dimension: [Function (anonymous)],
+                    unit: [Function (anonymous)],
+                    keyword: [Function (anonymous)],
+                    variable: [Function (anonymous)],
+                    property: [Function (anonymous)],
+                    ruleset: [Function (anonymous)],
+                    element: [Function (anonymous)],
+                    attribute: [Function (anonymous)],
+                    combinator: [Function (anonymous)],
+                    selector: [Function (anonymous)],
+                    quoted: [Function (anonymous)],
+                    expression: [Function (anonymous)],
+                    declaration: [Function (anonymous)],
+                    call: [Function (anonymous)],
+                    url: [Function (anonymous)],
+                    import: [Function (anonymous)],
+                    comment: [Function (anonymous)],
+                    anonymous: [Function (anonymous)],
+                    value: [Function (anonymous)],
+                    javascript: [Function (anonymous)],
+                    assignment: [Function (anonymous)],
+                    condition: [Function (anonymous)],
+                    paren: [Function (anonymous)],
+                    media: [Function (anonymous)],
+                    container: [Function (anonymous)],
+                    queryinparens: [Function (anonymous)],
+                    unicodedescriptor: [Function (anonymous)],
+                    negative: [Function (anonymous)],
+                    extend: [Function (anonymous)],
+                    variablecall: [Function (anonymous)],
+                    namespacevalue: [Function (anonymous)],
+                    mixin: [Object: null prototype] {
+                      call: [Function (anonymous)],
+                      definition: [Function (anonymous)]
+                    },
+                    createFromEnvironment: [Function: default_1],
+                    lesscHelper: {
+                      stylize: [Function: stylize],
+                      printUsage: [Function: printUsage]
+                    },
+                    PluginLoader: [Function: PluginLoader],
+                    fs: {
+                      appendFile: [Function: appendFile],
+                      appendFileSync: [Function: appendFileSync],
+                      access: [Function: access],
+                      accessSync: [Function: accessSync],
+                      chown: [Function (anonymous)],
+                      chownSync: [Function (anonymous)],
+                      chmod: [Function (anonymous)],
+                      chmodSync: [Function (anonymous)],
+                      close: [Function: close],
+                      closeSync: [Function: closeSync],
+                      copyFile: [Function: copyFile],
+                      copyFileSync: [Function: copyFileSync],
+                      cp: [Function: cp],
+                      cpSync: [Function: cpSync],
+                      createReadStream: [Function: createReadStream],
+                      createWriteStream: [Function: createWriteStream],
+                      exists: [Function: exists],
+                      existsSync: [Function: existsSync],
+                      fchown: [Function (anonymous)],
+                      fchownSync: [Function (anonymous)],
+                      fchmod: [Function (anonymous)],
+                      fchmodSync: [Function (anonymous)],
+                      fdatasync: [Function: fdatasync],
+                      fdatasyncSync: [Function: fdatasyncSync],
+                      fstat: [Function (anonymous)],
+                      fstatSync: [Function (anonymous)],
+                      fsync: [Function: fsync],
+                      fsyncSync: [Function: fsyncSync],
+                      ftruncate: [Function: ftruncate],
+                      ftruncateSync: [Function: ftruncateSync],
+                      futimes: [Function: futimes],
+                      futimesSync: [Function: futimesSync],
+                      lchown: [Function (anonymous)],
+                      lchownSync: [Function (anonymous)],
+                      lchmod: [Function (anonymous)],
+                      lchmodSync: [Function (anonymous)],
+                      link: [Function: link],
+                      linkSync: [Function: linkSync],
+                      lstat: [Function (anonymous)],
+                      lstatSync: [Function (anonymous)],
+                      lutimes: [Function: lutimes],
+                      lutimesSync: [Function: lutimesSync],
+                      mkdir: [Function: mkdir],
+                      mkdirSync: [Function: mkdirSync],
+                      mkdtemp: [Function: mkdtemp],
+                      mkdtempSync: [Function: mkdtempSync],
+                      open: [Function: open],
+                      openSync: [Function: openSync],
+                      openAsBlob: [Function: openAsBlob],
+                      readdir: [Function: readdir],
+                      readdirSync: [Function: readdirSync],
+                      read: [Function: read],
+                      readSync: [Function (anonymous)],
+                      readv: [Function: readv],
+                      readvSync: [Function: readvSync],
+                      readFile: [Function: readFile],
+                      readFileSync: [Function: readFileSync],
+                      readlink: [Function: readlink],
+                      readlinkSync: [Function: readlinkSync],
+                      realpath: [Function: realpath] {
+                        native: [Function (anonymous)]
+                      },
+                      realpathSync: [Function: realpathSync] {
+                        native: [Function (anonymous)]
+                      },
+                      rename: [Function: rename],
+                      renameSync: [Function: renameSync],
+                      rm: [Function: rm],
+                      rmSync: [Function: rmSync],
+                      rmdir: [Function: rmdir],
+                      rmdirSync: [Function: rmdirSync],
+                      stat: [Function (anonymous)],
+                      statfs: [Function: statfs],
+                      statSync: [Function (anonymous)],
+                      statfsSync: [Function: statfsSync],
+                      symlink: [Function: symlink],
+                      symlinkSync: [Function: symlinkSync],
+                      truncate: [Function: truncate],
+                      truncateSync: [Function: truncateSync],
+                      unwatchFile: [Function: unwatchFile],
+                      unlink: [Function: unlink],
+                      unlinkSync: [Function: unlinkSync],
+                      utimes: [Function: utimes],
+                      utimesSync: [Function: utimesSync],
+                      watch: [Function: watch],
+                      watchFile: [Function: watchFile],
+                      writeFile: [Function: writeFile],
+                      writeFileSync: [Function: writeFileSync],
+                      write: [Function: write],
+                      writeSync: [Function: writeSync],
+                      writev: [Function: writev],
+                      writevSync: [Function: writevSync],
+                      Dirent: [class Dirent],
+                      Stats: [Function: Stats],
+                      ReadStream: [Getter/Setter],
+                      WriteStream: [Getter/Setter],
+                      FileReadStream: [Getter/Setter],
+                      FileWriteStream: [Getter/Setter],
+                      _toUnixTimestamp: [Function: toUnixTimestamp],
+                      Dir: [Getter/Setter],
+                      opendir: [Getter/Setter],
+                      opendirSync: [Getter/Setter],
+                      F_OK: 0,
+                      R_OK: 4,
+                      W_OK: 2,
+                      X_OK: 1,
+                      constants: [Object: null prototype] {
+                        UV_FS_SYMLINK_DIR: 1,
+                        UV_FS_SYMLINK_JUNCTION: 2,
+                        O_RDONLY: 0,
+                        O_WRONLY: 1,
+                        O_RDWR: 2,
+                        UV_DIRENT_UNKNOWN: 0,
+                        UV_DIRENT_FILE: 1,
+                        UV_DIRENT_DIR: 2,
+                        UV_DIRENT_LINK: 3,
+                        UV_DIRENT_FIFO: 4,
+                        UV_DIRENT_SOCKET: 5,
+                        UV_DIRENT_CHAR: 6,
+                        UV_DIRENT_BLOCK: 7,
+                        EXTENSIONLESS_FORMAT_JAVASCRIPT: 0,
+                        EXTENSIONLESS_FORMAT_WASM: 1,
+                        S_IFMT: 61440,
+                        S_IFREG: 32768,
+                        S_IFDIR: 16384,
+                        S_IFCHR: 8192,
+                        S_IFIFO: 4096,
+                        S_IFLNK: 40960,
+                        O_CREAT: 256,
+                        O_EXCL: 1024,
+                        UV_FS_O_FILEMAP: 536870912,
+                        O_TRUNC: 512,
+                        O_APPEND: 8,
+                        S_IRUSR: 256,
+                        S_IWUSR: 128,
+                        F_OK: 0,
+                        R_OK: 4,
+                        W_OK: 2,
+                        X_OK: 1,
+                        UV_FS_COPYFILE_EXCL: 1,
+                        COPYFILE_EXCL: 1,
+                        UV_FS_COPYFILE_FICLONE: 2,
+                        COPYFILE_FICLONE: 2,
+                        UV_FS_COPYFILE_FICLONE_FORCE: 4,
+                        COPYFILE_FICLONE_FORCE: 4
+                      },
+                      promises: [Getter],
+                      gracefulify: [Function: patch]
+                    },
+                    FileManager: [Function: FileManager],
+                    UrlFileManager: [Function: UrlFileManager],
+                    options: {
+                      javascriptEnabled: false,
+                      depends: false,
+                      compress: false,
+                      lint: false,
+                      paths: [],
+                      color: true,
+                      strictImports: false,
+                      insecure: false,
+                      rootpath: '',
+                      rewriteUrls: false,
+                      math: 1,
+                      strictUnits: false,
+                      globalVars: null,
+                      modifyVars: null,
+                      urlArgs: ''
+                    }
+                  },
+                  sourceMap: true,
+                  lessOptions: {
+                    javascriptEnabled: true,
+                    paths: []
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    strictExportPresence: true,
+    parser: {
+      javascript: {
+        requireContext: false,
+        url: false,
+        worker: false
+      }
+    }
+  },
+  devServer: {
+    host: 'localhost',
+    port: 4300,
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    },
+    historyApiFallback: {
+      index: '/index.html',
+      disableDotRule: true,
+      htmlAcceptHeaders: [
+        'text/html',
+        'application/xhtml+xml'
+      ],
+      rewrites: [
+        {
+          from: /^(?!\/)\/.*/,
+          to: [Function: to]
+        }
+      ]
+    },
+    setupExitSignals: false,
+    compress: false,
+    static: false,
+    server: 'http',
+    allowedHosts: undefined,
+    devMiddleware: {
+      publicPath: '/',
+      stats: false
+    },
+    liveReload: undefined,
+    hot: undefined,
+    proxy: undefined,
+    webSocketServer: false,
+    client: undefined
+  },
+  mode: 'development',
+  devtool: false,
+  target: [
+    'web',
+    'es2015'
+  ],
+  profile: false,
+  resolve: {
+    roots: [
+      'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote'
+    ],
+    extensions: [
+      '.ts',
+      '.tsx',
+      '.mjs',
+      '.js'
+    ],
+    symlinks: true,
+    modules: [
+      'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote',
+      'node_modules'
+    ],
+    mainFields: [
+      'es2020',
+      'es2015',
+      'browser',
+      'module',
+      'main'
+    ],
+    conditionNames: [
+      'es2020',
+      'es2015',
+      '...'
+    ],
+    alias: {}
+  },
+  resolveLoader: {
+    symlinks: true
+  },
+  context: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote',
+  entry: {
+    main: [
+      'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\src\\main.ts'
+    ],
+    polyfills: [
+      'zone.js'
+    ]
+  },
+  externals: [],
+  output: {
+    uniqueName: 'ngHost_Remote',
+    hashFunction: 'xxhash64',
+    clean: true,
+    path: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\dist\\ng-host',
+    publicPath: 'auto',
+    filename: '[name].js',
+    chunkFilename: '[name].js',
+    libraryTarget: undefined,
+    crossOriginLoading: false,
+    trustedTypes: 'angular#bundler',
+    scriptType: 'module'
+  },
+  watch: undefined,
+  watchOptions: {
+    poll: undefined,
+    followSymlinks: false,
+    ignored: undefined
+  },
+  snapshot: {
+    module: {
+      hash: false
+    }
+  },
+  performance: {
+    hints: false
+  },
+  ignoreWarnings: [
+    /Failed to parse source map from/,
+    /Add postcss as project dependency/,
+    /"@charset" must be the first rule in the file/
+  ],
+  experiments: {
+    backCompat: false,
+    syncWebAssembly: true,
+    asyncWebAssembly: true,
+    topLevelAwait: false,
+    outputModule: true
+  },
+  infrastructureLogging: {
+    debug: undefined,
+    level: 'error'
+  },
+  stats: {
+    all: false,
+    colors: true,
+    hash: true,
+    timings: true,
+    chunks: true,
+    builtAt: true,
+    warnings: true,
+    errors: true,
+    assets: true,
+    cachedAssets: true,
+    ids: true,
+    entrypoints: true
+  },
+  cache: {
+    type: 'filesystem',
+    profile: undefined,
+    cacheDirectory: 'C:\\Users\\Budi Santoso\\Documents\\personal\\tester\\remote\\.angular\\cache\\17.3.9\\angular-webpack',
+    maxMemoryGenerations: 1,
+    name: '799b0bbba8dc9bc5e70726ca1d6dcbe6ecf1a1ce'
+  },
+  optimization: {
+    minimizer: [],
+    moduleIds: 'deterministic',
+    chunkIds: 'deterministic',
+    emitOnErrors: false,
+    runtimeChunk: false,
+    splitChunks: {
+      maxAsyncRequests: Infinity,
+      cacheGroups: {
+        default: false,
+        common: false,
+        vendors: false,
+        defaultVendors: false
+      }
+    }
+  },
+  node: false
+};
